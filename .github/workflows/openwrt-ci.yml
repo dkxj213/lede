@@ -133,13 +133,14 @@ jobs:
           # EOF
 
           # USB3.0支持:
-          # cat >> .config <<EOF
-          # CONFIG_PACKAGE_kmod-usb-ohci=y
-          # CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-          # CONFIG_PACKAGE_kmod-usb2=y
-          # CONFIG_PACKAGE_kmod-usb2-pci=y
-          # CONFIG_PACKAGE_kmod-usb3=y
-          # EOF
+          cat >> .config <<EOF
+            CONFIG_PACKAGE_kmod-usb-ohci=y
+            CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+            CONFIG_PACKAGE_kmod-usb2=y
+            CONFIG_PACKAGE_kmod-usb2-pci=y
+            CONFIG_PACKAGE_kmod-usb3=y
+            CONFIG_PACKAGE_kmod-sched-core=y
+          EOF
 
           # 常用LuCI插件选择:
           cat >> .config <<EOF
@@ -165,7 +166,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
-            CONFIG_PACKAGE_luci-app-rtl8187=y
+            
           EOF
 
           # LuCI主题:
